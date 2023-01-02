@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import { Unity, useUnityContext } from "react-unity-webgl";
@@ -24,7 +24,15 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.center}>
-          <Image
+          {/* <Image
+            className={styles.logo}
+            src="/next.svg"
+            alt="Next.js Logo"
+            width={180}
+            height={37}
+            priority
+          /> */}
+          <img
             className={styles.logo}
             src="/next.svg"
             alt="Next.js Logo"
@@ -33,7 +41,14 @@ export default function Home() {
             priority
           />
           <div className={styles.thirteen}>
-            <Image
+            {/* <Image
+              src="/thirteen.svg"
+              alt="13"
+              width={40}
+              height={31}
+              priority
+            /> */}
+            <img
               src="/thirteen.svg"
               alt="13"
               width={40}
