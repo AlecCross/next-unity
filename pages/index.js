@@ -5,6 +5,10 @@ import styles from '../styles/Home.module.css'
 import urlHome from "../package.json";
 import Unity3dGarden from '../components/Unity3dGarden';
 import UnityCameraControllMovement from '../components/UnityCameraControllMovement';
+import UnityRunerV2 from '../components/UnityRunerV2';
+import PacmanInTheSpace from '../components/PacmanInTheSpace';
+import RunnerGameUnity3d from '../components/RunnerGameUnity3d';
+import RvsTUnity2D from '../components/RvsTUnity2D';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -54,6 +58,10 @@ export default function Home() {
         </div>
         <Unity3dGarden/>
         <UnityCameraControllMovement/>
+        <UnityRunerV2/>
+        <PacmanInTheSpace/>
+        <RunnerGameUnity3d/>
+        <RvsTUnity2D />
       </main>
     </>
   )
