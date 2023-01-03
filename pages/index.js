@@ -2,18 +2,13 @@ import Head from 'next/head'
 // import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
-import { Unity, useUnityContext } from "react-unity-webgl";
 import urlHome from "../package.json";
+import Unity3dGarden from '../components/Unity3dGarden';
+import UnityCameraControllMovement from '../components/UnityCameraControllMovement';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const { unityProvider } = new useUnityContext({
-    dataUrl: `${urlHome.homepage}build/ReactBuild.data`,
-    frameworkUrl: `${urlHome.homepage}build/ReactBuild.framework.js`,
-    loaderUrl: `${urlHome.homepage}build/ReactBuild.loader.js`,
-    codeUrl: `${urlHome.homepage}build/ReactBuild.wasm`,
-  });
   return (
     <>
       <Head>
@@ -57,7 +52,8 @@ export default function Home() {
             />
           </div>
         </div>
-        <Unity unityProvider={unityProvider} style={{ width: 800, height: 600, border: "solid black 1px" }} />
+        <Unity3dGarden/>
+        <UnityCameraControllMovement/>
       </main>
     </>
   )
