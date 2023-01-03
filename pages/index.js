@@ -34,7 +34,7 @@ export default function Home() {
           /> */}
           <img
             className={styles.logo}
-            src="/next.svg"
+            src={`${urlHome.homepage}/next.svg`}
             alt="Next.js Logo"
             width={180}
             height={37}
@@ -49,7 +49,7 @@ export default function Home() {
               priority
             /> */}
             <img
-              src="/thirteen.svg"
+              src={`${urlHome.homepage}/thirteen.svg`}
               alt="13"
               width={40}
               height={31}
