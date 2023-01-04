@@ -1,0 +1,15 @@
+.loadingBar {
+    background: #ffffff;
+    width: 300px;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loadingBarFill {
+    height: 6px;
+    border-radius: 5px;
+    margin: 2px;
+    background: #5c5c5c;
+    transition: 0.3s width ease-out;
+}
