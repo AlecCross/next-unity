@@ -27,6 +27,6 @@ export default function PacmanInTheSpace() {
                 />
             </div>
         )}
-        <Unity unityProvider={unityProvider} style={{ width: 300, height: 150, border: "solid white 1px" }} />
+        <Unity unityProvider={unityProvider} style={{ width: 300, height: 300, border: "solid white 1px" }} devicePixelRatio={1}/>
     </div>
 }

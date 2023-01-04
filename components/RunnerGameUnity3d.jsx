@@ -15,18 +15,27 @@ export default function RunnerGameUnity3d() {
     // percentage of the Unity Application that has loaded.
     const loadingPercentage = Math.round(loadingProgression * 100);
 
-    return <div >
+    return <>
         {isLoaded === false && (
             // We'll conditionally render the loading overlay if the Unity
             // Application is not loaded.
-            <div className={styles.loadingBar}>
+            <div className={styles.loadingBar} style={{
+                marginLeft: 'auto', marginRight: 'auto',
+            }}>
                 {/* <p>Loading... ({loadingPercentage}%)</p> */}
                 <div
                     className={styles.loadingBarFill}
-                    style={{ width: loadingProgression * 100 }}
+                    style={{
+                        width: loadingProgression * 100
+                    }}
                 />
             </div>
-        )}
-        <Unity unityProvider={unityProvider} style={{ width: 300, height: 150, border: "solid white 1px" }} />
-    </div>
+        )
+        }
+        <Unity unityProvider={unityProvider} style={{
+            display: "block",
+            marginLeft: 'auto',
+            marginRight: 'auto', width: 300, height: 600, border: "solid white 1px"
+        }} devicePixelRatio={3.2} />
+    </>
 }

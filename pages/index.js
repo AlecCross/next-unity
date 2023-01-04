@@ -3,12 +3,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import urlHome from "../package.json";
-import Unity3dGarden from '../components/Unity3dGarden';
-import UnityCameraControllMovement from '../components/UnityCameraControllMovement';
-import UnityRunerV2 from '../components/UnityRunerV2';
-import PacmanInTheSpace from '../components/PacmanInTheSpace';
-import RunnerGameUnity3d from '../components/RunnerGameUnity3d';
-import RvsTUnity2D from '../components/RvsTUnity2D';
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,12 +52,29 @@ export default function Home() {
           </div>
         </div>
         <div style={{ display: "flex", flexWrap: "wrap", marginLeft: 75 }}>
-          {/* <Unity3dGarden /> */}
-          {/* <UnityCameraControllMovement /> */}
-          {/* <UnityRunerV2 /> */}
-          <PacmanInTheSpace />
-          <RunnerGameUnity3d />
-          <RvsTUnity2D />
+          <ul>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/runner">Runner</Link>
+            </li>
+            <li>
+              <Link href="/robocop">Robocop</Link>
+            </li>
+            <li>
+              <Link href="/runner2">Runner2</Link>
+            </li>
+            <li>
+              <Link href="/pacman">Pacman</Link>
+            </li>
+            <li>
+              <Link href="/garden">Garden</Link>
+            </li>
+            <li>
+              <Link href="/movements">Camera controll abd Movement</Link>
+            </li>
+          </ul>
         </div>
       </main>
     </>
