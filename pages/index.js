@@ -2,8 +2,10 @@ import Head from 'next/head'
 // import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
+import grid from '../css.module/grid.module.css'
 import urlHome from "../package.json";
 import Link from 'next/link'
+import projectList from "../data/projectList";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,8 +18,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.center}>
+      <main >
+        <div className={styles.center} >
           {/* <Image
             className={styles.logo}
             src="/next.svg"
@@ -51,30 +53,22 @@ export default function Home() {
             />
           </div>
         </div>
-        <div style={{ display: "flex", flexWrap: "wrap", marginLeft: 75 }}>
-          <ul>
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/runner">Runner</Link>
-            </li>
-            <li>
-              <Link href="/robocop">Robocop</Link>
-            </li>
-            <li>
-              <Link href="/runner2">Runner2</Link>
-            </li>
-            <li>
-              <Link href="/pacman">Pacman</Link>
-            </li>
-            <li>
-              <Link href="/garden">Garden</Link>
-            </li>
-            <li>
-              <Link href="/movements">Camera controll abd Movement</Link>
-            </li>
-          </ul>
+        <div className={styles.center}>
+          <div className={grid.container}>
+            {projectList.map(
+              project => <div key={project.image} className={grid.element}>
+                <Link href={project.link}>
+                  <div style={{ paddingBottom: 30, paddingTop: 30 }}>
+                    <img style={{ width: "100%" }} src={project.image} alt={project.title} />
+                    <div>
+                      <h4 className={grid.element__name}>{project.title}</h4>
+                      <h5 className={grid.element__name}>{project.description}</h5>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            )}
+          </div>
         </div>
       </main>
     </>
